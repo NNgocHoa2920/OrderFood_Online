@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ngochoa.orderfood">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.ngochoa.orderfood.ViewUserActivity" />
+        <activity android:name="com.ngochoa.orderfood.OrderActivity" />
+        <activity android:name="com.ngochoa.orderfood.FavoriteActivity" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity android:name="com.ngochoa.orderfood.DetailOrderActivity" />
+        <activity android:name="com.ngochoa.orderfood.ForgotPassActivity" />
+        <activity android:name="com.ngochoa.orderfood.RestaurantViewOrderActivity" />
+        <activity android:name="com.ngochoa.orderfood.CartActivity" />
+        <activity android:name="com.ngochoa.orderfood.FoodDetailActivity" />
+        <activity
+            android:name="com.ngochoa.orderfood.KhachHangActivity"
+            android:label="@string/title_activity_test"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.ngochoa.orderfood.InfoPersonActivity" />
+        <activity android:name="com.ngochoa.orderfood.SearchFoodActivity" />
+        <activity android:name="com.ngochoa.orderfood.ViewListFoodActivity" />
+        <activity android:name="com.ngochoa.orderfood.AddFoodActivity" />
+        <activity android:name="com.ngochoa.orderfood.ChangePassActivity" />
+        <activity android:name="com.ngochoa.orderfood.RemoveRestaurantActivity" />
+        <activity android:name="com.ngochoa.orderfood.AddRestaurantActivity" />
+        <activity android:name="com.ngochoa.orderfood.AdminActivity" />
+        <activity android:name="com.ngochoa.orderfood.RestaurantActivity" />
+        <activity android:name="com.ngochoa.orderfood.RegisterActivity" />
+        <activity android:name="com.ngochoa.orderfood.LoginActivity" />
+        <activity android:name="com.ngochoa.orderfood.WelcomActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.ngochoa.orderfood.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider659139777865159"
+            android:exported="true" />
+
+        <service
+            android:name="com.ngochoa.orderfood.Notifications.MyFirebaseIdService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.ngochoa.orderfood.Notifications.MyFirebaseMessaging"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
