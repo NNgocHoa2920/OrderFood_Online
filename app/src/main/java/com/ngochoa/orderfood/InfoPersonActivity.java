@@ -53,7 +53,7 @@ public class InfoPersonActivity extends AppCompatActivity {
     String userID;
     DatabaseReference mDatabase;
     FirebaseStorage storage = FirebaseStorage.getInstance();
-    StorageReference storageRef = storage.getReferenceFromUrl("gs://databaseorderfood.appspot.com");
+    StorageReference storageRef = storage.getReferenceFromUrl("gs://orderfood-1712e.appspot.com");
     int REQUEST_CODE_FOLDER = 123;
     String link_image;
     AlertDialog waiting;

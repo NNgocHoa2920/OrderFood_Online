@@ -50,7 +50,7 @@ public class AddFoodActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_add_food);
-        final StorageReference storageRef = storage.getReferenceFromUrl("gs://databaseorderfood.appspot.com");
+        final StorageReference storageRef = storage.getReferenceFromUrl("gs://orderfood-1712e.appspot.com");
         AnhXa();
         waiting =  new SpotsDialog.Builder().setContext(this).setMessage("Vui lòng đợi").setCancelable(false).build();
 

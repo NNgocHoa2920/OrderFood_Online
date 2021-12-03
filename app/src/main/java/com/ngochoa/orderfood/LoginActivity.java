@@ -113,13 +113,7 @@ public class LoginActivity extends AppCompatActivity {
                                     } else if (user.getUserType().equals("restaurent")) {
                                         startActivity(new Intent(LoginActivity.this, RestaurantActivity.class));
                                     } else if (user.getUserType().equals("customer")) {
-
-                                        if (USER.isEmailVerified()) {
-                                            startActivity(new Intent(LoginActivity.this, KhachHangActivity.class));
-                                        } else {
-                                            Toast.makeText(LoginActivity.this, "Vui lòng xác thực Email để đăng nhập", Toast.LENGTH_SHORT).show();
-                                        }
-
+                                        startActivity(new Intent(LoginActivity.this, KhachHangActivity.class));
                                     }
                                 }
 

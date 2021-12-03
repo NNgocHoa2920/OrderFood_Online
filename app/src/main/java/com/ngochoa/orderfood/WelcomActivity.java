@@ -200,13 +200,7 @@ public class WelcomActivity extends AppCompatActivity {
                                     } else if (user.getUserType().equals("restaurent")) {
                                         startActivity(new Intent(WelcomActivity.this, RestaurantActivity.class));
                                     } else if (user.getUserType().equals("customer")) {
-
-                                        if (USER.isEmailVerified()) {
-                                            startActivity(new Intent(WelcomActivity.this, KhachHangActivity.class));
-                                        } else {
-                                            Toast.makeText(WelcomActivity.this, "Vui lòng xác thực Email để đăng nhập", Toast.LENGTH_SHORT).show();
-                                        }
-
+                                        startActivity(new Intent(WelcomActivity.this, KhachHangActivity.class));
                                     }
                                 }
 

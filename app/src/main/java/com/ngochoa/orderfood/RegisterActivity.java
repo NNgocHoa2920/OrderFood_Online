@@ -80,7 +80,7 @@ public class RegisterActivity extends AppCompatActivity {
         final String Name = name.getText().toString().trim();
         String Phone = phone.getText().toString().trim();
         String Address = address.getText().toString().trim();
-        final User KhachHang    = new User(Email,Pass,Name,Phone,Address,"customer");
+        final User KhachHang = new User(Email, Pass, Name, Phone, Address, "customer");
 
         if (Email.isEmpty() || Pass.isEmpty() || Name.isEmpty() || Phone.isEmpty() || Address.isEmpty()) {
             process.dismiss();
@@ -101,7 +101,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if (task.isSuccessful()) {
                                             process.dismiss();
-                                            Toast.makeText(RegisterActivity.this, "Đăng ký thành công. Vui lòng xác thực Email", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(RegisterActivity.this, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
 
                                             // send notification to Admin
                                             sendNotification(Name);
