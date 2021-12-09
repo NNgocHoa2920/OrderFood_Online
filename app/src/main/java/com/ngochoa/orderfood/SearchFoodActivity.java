@@ -49,7 +49,6 @@ public class SearchFoodActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //Note  add this code before setcontentView
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
                 .setDefaultFontPath("fonts/Rubik.ttf")
                 .setFontAttrId(R.attr.fontPath)

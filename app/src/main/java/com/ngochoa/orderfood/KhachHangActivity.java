@@ -101,40 +101,7 @@ public class KhachHangActivity extends AppCompatActivity implements NavigationVi
             getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.colorPrimary));
         }
 
-//        //Note  add this code before setcontentView
-//        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-//                .setDefaultFontPath("fonts/Rubik.ttf")
-//                .setFontAttrId(R.attr.fontPath)
-//                .build());
-
         setContentView(R.layout.activity_customer);
-
-
-//        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.refreshLayout);
-//        swipeRefreshLayout.setColorSchemeResources(R.color.pDarkGreen, R.color.Orange, R.color.Red, R.color.colorBlue);
-//
-//
-//        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-//            @Override
-//            public void onRefresh() {
-//                if(isNetworkAvailable()){
-//                    LoadData_Food();
-//                }else{
-//                    Toast.makeText(KhachHangActivity.this, "Vui lòng kiểm tra kết nối Internet", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
-//
-//                new Handler().postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        swipeRefreshLayout.setRefreshing(false);
-//                    }
-//                }, 1500);
-//
-//
-//            }
-//        });
-
 
         //setup Slider
         setupSlider();
@@ -187,7 +154,7 @@ public class KhachHangActivity extends AppCompatActivity implements NavigationVi
         navigationView.setNavigationItemSelectedListener(this);
         View headerview = navigationView.getHeaderView(0);
         ten = (TextView) headerview.findViewById(R.id.ten);
-        tenTK =( TextView) headerview.findViewById(R.id.tenTK);
+        tenTK = (TextView) headerview.findViewById(R.id.tenTK);
 
         LoadData_User();
 
@@ -195,9 +162,6 @@ public class KhachHangActivity extends AppCompatActivity implements NavigationVi
         arrFood = new ArrayList<>();
         adapter = new FoodAdapter1(this, R.layout.item_food, arrFood);
         lvFood.setAdapter(adapter);
-
-
-
 
         LoadData_Food();
 
@@ -214,10 +178,6 @@ public class KhachHangActivity extends AppCompatActivity implements NavigationVi
                 startActivity(foodDetail);
             }
         });
-
-
-
-
     }
 
     private void setupSlider() {
@@ -315,7 +275,7 @@ public class KhachHangActivity extends AppCompatActivity implements NavigationVi
                         arrFood.add(new Food(mon.getTenMon(),mon.getTenQuan(),mon.getLinkAnh(),mon.getIdQuan(),mon.getGiaMon(),mon.getTinhTrang()));
                         adapter.notifyDataSetChanged();
                         ++i;
-                        if(i==3) break; // moi quan 3 mon
+                        if(i == 3) break;
                     }
                 }
             }

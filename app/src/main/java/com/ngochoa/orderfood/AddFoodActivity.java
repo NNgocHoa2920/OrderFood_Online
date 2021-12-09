@@ -73,8 +73,7 @@ public class AddFoodActivity extends AppCompatActivity {
                 if(ten.isEmpty()|| stringGia.isEmpty()){
                     waiting.dismiss();
                     Toast.makeText(AddFoodActivity.this, "Vui lòng nhập đầy đủ thông tin ", Toast.LENGTH_SHORT).show();
-                }
-                else{
+                } else {
                     Calendar calendar = Calendar.getInstance();
                     final String tenhinh="image"+calendar.getTimeInMillis();
                     final StorageReference mountainsRef = storageRef.child(tenhinh+".png");
@@ -127,10 +126,7 @@ public class AddFoodActivity extends AppCompatActivity {
                             });
                         }
                     });
-
-
                 }
-
             }
         });
 
