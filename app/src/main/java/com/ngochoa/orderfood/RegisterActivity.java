@@ -101,7 +101,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if (task.isSuccessful()) {
                                             process.dismiss();
-                                            Toast.makeText(RegisterActivity.this, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(RegisterActivity.this, "Đăng ký thành công, vui lòng xác thực email", Toast.LENGTH_SHORT).show();
 
                                             // send notification to Admin
                                             sendNotification(Name);
