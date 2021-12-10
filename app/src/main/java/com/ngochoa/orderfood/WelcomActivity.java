@@ -197,7 +197,7 @@ public class WelcomActivity extends AppCompatActivity {
 
                                     if (user.getUserType().equals("admin")) {
                                         startActivity(new Intent(WelcomActivity.this, AdminActivity.class));
-                                    } else if (user.getUserType().equals("restaurent")) {
+                                    } else if (user.getUserType().equals("restaurant")) {
                                         startActivity(new Intent(WelcomActivity.this, RestaurantActivity.class));
                                     } else if (user.getUserType().equals("customer")) {
                                         if (USER.isEmailVerified()) {
